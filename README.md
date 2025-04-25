@@ -1,5 +1,8 @@
 # ⚡ Real-Time Crypto Tracker
 
+## Deploy Link
+- https://xiv-tech-assigment.vercel.app/
+
 A React app that simulates live cryptocurrency tracking with filtering, sorting, and persistent preferences.
 
 ## 🔥 Features
@@ -39,6 +42,9 @@ npm run dev
 ## 📱 Responsive Design
 - Optimized for desktop and mobile viewing
 - Adapts to different screen sizes
+
+## 🎬 Demo Link
+- https://drive.google.com/file/d/1VcSZgYPOtBsT5Vnfp05ESj3yLVSrXLOm/view?usp=sharing
 
 ## 🔮 Future Enhancements
 - API integration for real market data
