@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import { useCryptoStore } from "../store/useCryptoStore";
 import { Crypto } from "../utils/db";
 import { IoMdArrowDropup, IoMdArrowDropdown, IoMdInformationCircleOutline } from "react-icons/io";
@@ -42,11 +42,14 @@ const SORTABLE_COLUMNS = [
 const CryptoTable = () => {
   const rows = useCryptoStore((state) => state.rows);
   const simulatePrices = useCryptoStore((state) => state.simulatePrices);
-
-  // Add missing state
-  const [filter, setFilter] = useState("all");
-  const [sortBy, setSortBy] = useState<keyof Crypto>("marketCap");
-  const [sortDir, setSortDir] = useState<"asc" | "desc">("desc");
+  
+  // Get filter/sort from persisted store instead of local state
+  const filter = useCryptoStore((state) => state.selectedFilter);
+  const setFilter = useCryptoStore((state) => state.setFilter);
+  const sortBy = useCryptoStore((state) => state.sortBy);
+  const setSortBy = useCryptoStore((state) => state.setSortBy);
+  const sortDir = useCryptoStore((state) => state.sortDir);
+  const setSortDir = useCryptoStore((state) => state.setSortDir);
 
   useEffect(() => {
     const interval = setInterval(simulatePrices, 1500);

@@ -1,55 +1,48 @@
-# React + TypeScript + Vite
+# ⚡ Real-Time Crypto Tracker
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React app that simulates live cryptocurrency tracking with filtering, sorting, and persistent preferences.
 
-Currently, two official plugins are available:
+## 🔥 Features
+- ✅ Live-updating prices (simulated)
+- ✅ Table view with market data
+- ✅ Sort by any column (price, market cap, etc.)
+- ✅ Filter by All / Top Gainers / Top Losers
+- ✅ Red/green indicators for gain/loss
+- ✅ 7-day trend chart for each coin
+- ✅ Preferences saved in localStorage via Zustand
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## 🛠️ Tech Stack
+- React
+- Redux Toolkit (optional if Zustand used)
+- Zustand for state management
+- Recharts.js or sparkline for mini-charts
+- Tailwind CSS for UI
 
-## Expanding the ESLint configuration
+## 💾 Local Storage
+- User filter/sort preferences are saved using Zustand's `persist` middleware
+- App restores the previous session state automatically
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## 🚀 Getting Started
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## 📊 Usage
+- View all cryptocurrencies in the main table
+- Use the filter buttons to show All coins, Top Gainers, or Top Losers
+- Sort by any column using the dropdown menu
+- Toggle ascending/descending sort with the arrow button
+- Hover over information icons for metric explanations
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
-"# XivTech_assigment" 
+## 📱 Responsive Design
+- Optimized for desktop and mobile viewing
+- Adapts to different screen sizes
+
+## 🔮 Future Enhancements
+- API integration for real market data
+- User authentication and saved preferences
+- Detailed view for individual cryptocurrencies
+- Price alerts and notifications
+
